@@ -81,7 +81,7 @@ const MotivationComponent = () => {
   return (
     <div className="motivation-container">
       <h1 className="app-title">
-        <p>MOTIVATION UP ↑</p>
+        <p>MOTIVATION UP</p>
       </h1>
       {isPlaying ? ( // 動画再生中の表示
         <div>
