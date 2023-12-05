@@ -1,0 +1,169 @@
+/* styles.css */
+
+
+.app-title {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.app-title p {
+  position: relative;
+  background: #cdc3b4;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: 2s linear infinite anim;
+}
+
+@keyframes anim {
+  0%,100% { text-shadow: 0px 0px 18px rgba(255,178,216,0.9); }
+  50% { text-shadow: 0px 0px 8px rgba(255,178,216,0.5); }
+}
+
+.app-title p::before {
+  position: absolute;
+  inset: 0px;
+  content: "MOTIVATION UP";
+  color: #ffffff;
+  z-index: -1;
+  filter: blur(25px);
+}
+
+.motivation-container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 90%;
+}
+
+.motivation-button {
+  padding:20px;
+  border: none;
+  border-radius: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  background-color: #88737c;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.4);
+  width: 30%;
+}
+
+.motivation-button strong{
+  color: #ff5656;
+}
+
+.motivation-button:hover {
+  color: #fff;
+  background-color: #77656d;
+  box-shadow: 0 5px 40px rgba(255, 255, 255, 0.4);
+  transition : .5s;
+}
+
+.video-title {
+  font-size: 24px;
+  color: #d9bfbc;
+  padding: 0  0 20px 0 ;
+  animation: fluffy1 3s ease infinite;
+}
+
+.video-title p{
+  background: #a00000;
+font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+@keyframes fluffy1 {
+  0% {
+    transform: translateY(0);
+  }
+  5%, 10% {
+    transform: translateY(0);
+  }
+  20%, 30% {
+    transform: translateY(-10px);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50%, 100% {
+    transform: translateY(0);
+  }
+}
+
+.fullscreen-video {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: 20px auto 40px auto;
+  display: block;
+}
+
+.stop-button,
+.another-video-button {
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  background-color: #88737c;
+  border-bottom: 5px solid #462332;
+  margin: 0 10px;
+}
+
+.stop-button:hover,
+.another-video-button:hover {
+  margin-top: 3px;
+  color: #fff;
+  background-color: #5b4d53;
+  border-bottom: 2px solid #000000;
+  transition : .5s;
+}
+
+@media screen and (max-width: 766px) {
+  .app-title{
+    width: 100%;
+    padding: 20px 0;
+  }
+  .app-title p{
+    font-size: 42px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+  .fullscreen-video{
+    margin: 20px auto;
+    height: 300px;
+  }
+  .video-title {
+    font-size: 20px;
+    padding: 0;
+  }
+  .stop-button,
+  .another-video-button {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    padding: 15px;
+    width: 100%;
+  }
+  .motivation-button {
+    font-size: 18px;
+    padding: 20px 20px;
+    width: 100%;
+  }
+  .video-title p{
+    font-size: 16px;
+  }
+}
